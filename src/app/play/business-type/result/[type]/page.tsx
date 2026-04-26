@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import type { Metadata } from "next";
 import { results, getBusinessTypeByKey } from "@/data/business-type/results";
 import type { BusinessType } from "@/types/business-type";
@@ -34,6 +35,9 @@ export function generateMetadata({ params }: Props): Metadata {
     openGraph: {
       title: `${result.koreanName} — 사장님 사업유형 테스트`,
       description: result.oneLiner,
+      images: result.illustration
+        ? [{ url: result.illustration, width: 800, height: 800 }]
+        : undefined,
     },
   };
 }
@@ -48,8 +52,24 @@ export default function BusinessTypeResultPage({ params }: Props) {
     >
       <div className="mx-auto max-w-2xl px-4 py-12 sm:py-16">
         <div className="text-center">
-          <div className="mx-auto inline-flex items-center justify-center rounded-3xl border-4 border-white/80 bg-white/40 shadow-lg backdrop-blur-sm" style={{ width: 200, height: 200 }}>
-            <div className="text-9xl">{result.emoji}</div>
+          <div
+            className="mx-auto overflow-hidden rounded-3xl border-4 border-white/80 bg-white/40 shadow-lg backdrop-blur-sm"
+            style={{ width: 240, height: 240 }}
+          >
+            {result.illustration ? (
+              <Image
+                src={result.illustration}
+                alt={result.koreanName}
+                width={240}
+                height={240}
+                priority
+                className="h-full w-full object-cover"
+              />
+            ) : (
+              <div className="flex h-full w-full items-center justify-center text-9xl">
+                {result.emoji}
+              </div>
+            )}
           </div>
           <h1
             className="mt-6 text-3xl font-bold leading-tight text-slate-900 sm:text-4xl"
