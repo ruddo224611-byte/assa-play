@@ -14,15 +14,11 @@ export const results: Record<ResultType, ResultDefinition> = {
 그래서 가게가 오래 가는 거임.
 
 가끔 차갑다는 소리 듣지만 통장은 따뜻함.`,
-    hiddenCosts: [
-      "기준 지키느라 가끔 피곤함",
-      "혼자 다 떠안는 건 또 별개의 문제",
-      "친절하지 않다는 오해 가끔 받음",
-    ],
-    actionLine: "친절 ≠ 호구.",
     shareCard: "나는 선긋기 마스터 사장 / 기준 안 무너짐 / 통장 안전",
     cafeShareText:
       "나 선긋기 마스터 사장 나옴. 배려는 하는데 기준은 안 무너지는 편이라는데 ㅋㅋ 너도 해봐",
+    longDescription: "",
+    solution: "",
   },
   "굿보이 사장형": {
     type: "굿보이 사장형",
@@ -39,15 +35,11 @@ export const results: Record<ResultType, ResultDefinition> = {
 결과:
 손님 → "사장님 좋다"
 사장님 통장 → "?????"`,
-    hiddenCosts: [
-      `"오늘만요" 입버릇`,
-      "손님 한 명 표정 안 좋으면 하루 종일 신경 쓰임",
-      `거울 보면서 "내가 호구인가?" 자문`,
-    ],
-    actionLine: "좋은 사람 말고, 예측 가능한 사장.",
     shareCard: "나는 굿보이 사장 / 좋은 사람 콤플렉스 / 통장 안 좋음",
     cafeShareText:
       "나 굿보이 사장 나옴 ㅋㅋ 손님한테 좋게 보이려다 본인만 갈리는 타입이라는데… 인정하기 싫지만 맞음 ㅠㅠ",
+    longDescription: "",
+    solution: "",
   },
   "입꾹닫 사장형": {
     type: "입꾹닫 사장형",
@@ -64,15 +56,11 @@ export const results: Record<ResultType, ResultDefinition> = {
 
 그러다 한 달 뒤에 폭발하거나 혼자 속앓이.
 직원·거래처·손님 다 합쳐 매일 작은 인내 적금 중.`,
-    hiddenCosts: [
-      "똑같은 문제 3번째 반복",
-      `"그때 말했어야 했는데" 후회 자주`,
-      "잠 잘 안 옴",
-    ],
-    actionLine: "어색해도 오늘 말하기.",
     shareCard: "나는 입꾹닫 사장 / 분위기 망칠까봐 할 말 못 함",
     cafeShareText:
       "입꾹닫 사장 나옴. 분위기 망칠까봐 할 말 미루는 타입이라는데 너무 정확해서 기분 나쁨ㅋㅋ",
+    longDescription: "",
+    solution: "",
   },
   "슈퍼맨 사장형": {
     type: "슈퍼맨 사장형",
@@ -88,15 +76,11 @@ export const results: Record<ResultType, ResultDefinition> = {
 
 본인이 1인 인질.
 "내가 안 하면 누가 해" 가 입버릇.`,
-    hiddenCosts: [
-      "내가 안 나가면 불안해서 못 쉼",
-      "직원이 자기가 알아서 안 함 (안 하게 만들어둠)",
-      "휴가? 그게 뭐임?",
-    ],
-    actionLine: "내가 할까보다, 누가 어떻게 할지.",
     shareCard: "나는 슈퍼맨 사장 / 책임감 만렙 / 본인 갈려나가는 중",
     cafeShareText:
       "슈퍼맨 사장 나옴 ㅋㅋ 문제 생기면 시스템보다 내가 먼저 메우는 타입이래. 휴가 못 가는 이유 찾음",
+    longDescription: "",
+    solution: "",
   },
   "기준없음 사장형": {
     type: "기준없음 사장형",
@@ -114,15 +98,11 @@ export const results: Record<ResultType, ResultDefinition> = {
 지인 C: "친구잖아"
 
 …가게 정체성도 흐려지는 중.`,
-    hiddenCosts: [
-      "수익 새는 곳이 5군데 이상",
-      `"오늘만요" 가 아니라 "이 손님만요" / "저 손님만요"`,
-      "직원도 사장님 기준이 뭔지 헷갈림",
-    ],
-    actionLine: "기준은 모두에게 동일하게.",
     shareCard: "나는 기준없음 사장 / 정 많아서 기준 사라지는 중",
     cafeShareText:
       "기준없음 사장 나옴. 정은 많은데 기준이 자꾸 흐려지는 타입이라네 ㅋㅋ 진짜 그럼",
+    longDescription: "",
+    solution: "",
   },
   "천사 사장형": {
     type: "천사 사장형",
@@ -138,15 +118,11 @@ export const results: Record<ResultType, ResultDefinition> = {
 사장님 본인은 "나 왜 이렇게 힘들지"
 
 이대로면 1년 안에 번아웃 직행.`,
-    hiddenCosts: [
-      "만성 피로",
-      "기준이라는 게 사실 없음",
-      "감정 수습에 에너지 다 씀",
-    ],
-    actionLine: "좋은 사람 말고, 오래 버티는 사장.",
     shareCard: "나는 천사 사장 / 좋은 사람 압박 만렙 / 번아웃 직전",
     cafeShareText:
       "천사 사장 나왔다… 좋은 사람이어야 한다는 압박이 가게 전체를 흔드는 타입이래 ㅠㅠ 너무 아프네",
+    longDescription: "",
+    solution: "",
   },
 };
 

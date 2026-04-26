@@ -3,11 +3,9 @@ import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
 import { getResultBySlug, results } from "@/data/results";
-import { evidenceCopy } from "@/data/evidenceCopy";
 import { relationCopy } from "@/data/relationCopy";
-import { relationFromSlug } from "@/lib/score";
-import type { AxisScores, ResultSlug } from "@/types/quiz";
-import AxisBars from "@/components/AxisBars";
+import { relationFromSlug, getRiskLevel, riskLevelColor } from "@/lib/score";
+import type { ResultSlug } from "@/types/quiz";
 
 type SearchParams = {
   o?: string;
@@ -35,25 +33,6 @@ const bgGradientBySlug: Record<ResultSlug, string> = {
   "people-pleaser": "bg-gradient-to-br from-pink-50 via-rose-50 to-pink-100",
 };
 
-function parseScores(sp: SearchParams): AxisScores | null {
-  if (
-    sp.a === undefined ||
-    sp.c === undefined ||
-    sp.r === undefined ||
-    sp.b === undefined ||
-    sp.p === undefined
-  ) {
-    return null;
-  }
-  return {
-    인정: Number(sp.a) || 0,
-    회피: Number(sp.c) || 0,
-    희생: Number(sp.r) || 0,
-    선: Number(sp.b) || 0,
-    양보: Number(sp.p) || 0,
-  };
-}
-
 export function generateStaticParams() {
   return Object.values(results).map((r) => ({ type: r.slug }));
 }
@@ -77,13 +56,10 @@ export default function ResultPage({ params, searchParams }: Props) {
   if (!result) notFound();
 
   const overall = searchParams.o ? Number(searchParams.o) : null;
-  const axes = parseScores(searchParams);
-  const isPersonal = overall !== null && axes !== null;
-  const evidenceTags = (searchParams.ev ?? "")
-    .split(",")
-    .map((t) => t.trim())
-    .filter(Boolean);
+  const isPersonal = overall !== null;
   const dominantRelation = relationFromSlug(searchParams.ctx);
+  const riskLevel = isPersonal ? getRiskLevel(overall!) : null;
+  const longBody = result.longDescription || result.description;
 
   return (
     <div
@@ -91,7 +67,10 @@ export default function ResultPage({ params, searchParams }: Props) {
     >
       <div className="mx-auto max-w-2xl px-4 py-12 sm:py-16">
         <div className="text-center">
-          <div className="mx-auto overflow-hidden rounded-3xl border-4 border-white/80 bg-white/40 shadow-lg backdrop-blur-sm" style={{ width: 240, height: 240 }}>
+          <div
+            className="mx-auto overflow-hidden rounded-3xl border-4 border-white/80 bg-white/40 shadow-lg backdrop-blur-sm"
+            style={{ width: 240, height: 240 }}
+          >
             <Image
               src={result.illustration}
               alt={result.type}
@@ -111,84 +90,42 @@ export default function ResultPage({ params, searchParams }: Props) {
             {result.oneLiner}
           </p>
 
-          {isPersonal && (
-            <div className="mt-8 inline-flex flex-col items-center rounded-2xl bg-white/80 px-8 py-5 backdrop-blur-sm shadow-sm">
+          {isPersonal && riskLevel && (
+            <div className="mt-8 inline-flex flex-col items-center rounded-2xl bg-white/85 px-8 py-5 shadow-sm backdrop-blur-sm">
               <p className="text-xs font-medium uppercase tracking-wider text-slate-500">
-                착한아이 지수
+                착한아이 정도
               </p>
-              <p
-                className="mt-1 text-6xl font-bold leading-none tabular-nums sm:text-7xl"
-                style={{ color: "#BF360C" }}
+              <span
+                className={`mt-3 inline-block rounded-full px-8 py-2.5 text-xl font-bold text-white shadow-sm ${riskLevelColor[riskLevel]}`}
+                style={{ fontFamily: "'Gmarket Sans', Pretendard, sans-serif" }}
               >
-                {overall}
-              </p>
-              <p className="mt-1 text-xs text-slate-400">/ 100</p>
+                {riskLevel}
+              </span>
             </div>
           )}
         </div>
 
-        {isPersonal && axes && (
-          <div className="mt-8 rounded-2xl border border-white/60 bg-white/80 p-6 shadow-sm backdrop-blur-sm">
-            <h3 className="mb-4 text-sm font-semibold text-slate-700">5축 점수</h3>
-            <AxisBars scores={axes} />
-          </div>
-        )}
-
-        <div className="mt-6 rounded-2xl border border-white/60 bg-white/85 p-6 shadow-sm backdrop-blur-sm">
-          <p className="whitespace-pre-line text-base leading-relaxed text-slate-800">
-            {result.description}
+        <div className="mt-8 rounded-2xl border border-white/60 bg-white/85 p-6 shadow-sm backdrop-blur-sm sm:p-8">
+          <p className="whitespace-pre-line text-base leading-relaxed text-slate-800 sm:text-[17px] sm:leading-[1.8]">
+            {longBody}
           </p>
           {dominantRelation && relationCopy[dominantRelation] && (
-            <p className="mt-4 text-sm font-medium text-slate-600">
+            <p className="mt-6 text-sm font-medium text-slate-600">
               👉 {relationCopy[dominantRelation]}
             </p>
           )}
         </div>
 
-        <div className="mt-6 rounded-2xl border border-rose-200 bg-rose-50/90 p-6 shadow-sm backdrop-blur-sm">
-          <h3 className="mb-3 text-sm font-bold text-rose-900">
-            🚨 너 진짜 망하는 길
-          </h3>
-          <ul className="space-y-2">
-            {result.hiddenCosts.map((cost, i) => (
-              <li key={i} className="flex gap-2 text-sm text-slate-800">
-                <span className="text-rose-500">•</span>
-                <span>{cost}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        {isPersonal && evidenceTags.length > 0 && (
-          <div className="mt-6 rounded-2xl border border-white/60 bg-white/85 p-6 shadow-sm backdrop-blur-sm">
-            <h3 className="mb-3 text-sm font-bold text-slate-700">
-              🔍 너의 답변에서 보임
+        {result.solution && (
+          <div className="mt-6 rounded-2xl border border-emerald-200 bg-emerald-50/90 p-6 shadow-sm backdrop-blur-sm sm:p-8">
+            <h3 className="mb-4 text-base font-bold text-emerald-900">
+              💡 해결 방법
             </h3>
-            <ul className="space-y-2">
-              {evidenceTags
-                .filter((tag) => evidenceCopy[tag])
-                .slice(0, 3)
-                .map((tag) => (
-                  <li key={tag} className="flex gap-2 text-sm text-slate-800">
-                    <span className="text-brand-600">•</span>
-                    <span>{evidenceCopy[tag]}</span>
-                  </li>
-                ))}
-            </ul>
+            <p className="whitespace-pre-line text-base leading-relaxed text-slate-800 sm:text-[17px] sm:leading-[1.8]">
+              {result.solution}
+            </p>
           </div>
         )}
-
-        <div className="mt-6 rounded-2xl border border-amber-200 bg-amber-50/95 p-6 shadow-sm backdrop-blur-sm">
-          <h3 className="mb-2 text-sm font-bold text-amber-900">
-            💡 내일부터 외울 한마디
-          </h3>
-          <p
-            className="text-xl font-bold leading-relaxed text-slate-900 sm:text-2xl"
-            style={{ fontFamily: "'Gmarket Sans', Pretendard, sans-serif" }}
-          >
-            “{result.actionLine}”
-          </p>
-        </div>
 
         {searchParams.lc === "1" && (
           <div className="mt-6 rounded-xl border border-amber-200 bg-amber-50/80 p-4 text-sm leading-relaxed text-amber-800 backdrop-blur-sm">

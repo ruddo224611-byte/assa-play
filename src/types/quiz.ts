@@ -18,6 +18,14 @@ export type ResultSlug =
   | "drift"
   | "people-pleaser";
 
+export type RiskLevel =
+  | "매우낮음"
+  | "낮음"
+  | "보통"
+  | "주의"
+  | "심각"
+  | "매우심각";
+
 export type QuestionType = "scenario" | "forced";
 
 export type OptionId = "A" | "B" | "C" | "D";
@@ -47,10 +55,10 @@ export type ResultDefinition = {
   illustration: string;
   oneLiner: string;
   description: string;
-  hiddenCosts: string[];
-  actionLine: string;
   shareCard: string;
   cafeShareText: string;
+  longDescription?: string;
+  solution?: string;
 };
 
 export type AxisScores = Record<Axis, number>;
