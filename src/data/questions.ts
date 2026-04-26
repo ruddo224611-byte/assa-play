@@ -1,0 +1,468 @@
+import type { Question } from "@/types/quiz";
+
+export const questions: Question[] = [
+  {
+    id: "q1",
+    type: "scenario",
+    text: "직원이 이번 주말 근무를 또 바꿔달라고 한다.",
+    contextTags: ["직원"],
+    options: [
+      {
+        id: "A",
+        label: "일단 내가 메꾸고 조용히 넘긴다.",
+        score: { 희생: 2, 선: 2, 인정: 1 },
+        evidenceTags: ["cover_shift"],
+      },
+      {
+        id: "B",
+        label: "이번만 받아주고, 다음에 기준을 정하자고 한다.",
+        score: { 희생: 1, 선: 1, 회피: 1 },
+        evidenceTags: ["soft_boundary_shift"],
+      },
+      {
+        id: "C",
+        label: "다른 직원과 스왑을 먼저 시도하게 하고, 안 되면 규정대로 처리한다.",
+        score: {},
+        evidenceTags: ["rule_first_shift"],
+      },
+      {
+        id: "D",
+        label: "규정상 어렵다고 말하고, 대안은 본인이 찾게 한다.",
+        score: {},
+        evidenceTags: ["clear_shift_boundary"],
+      },
+    ],
+  },
+  {
+    id: "q2",
+    type: "scenario",
+    text: "원가가 꽤 올랐고 가격 인상이 필요하다.",
+    contextTags: ["손님", "자기자신"],
+    options: [
+      {
+        id: "A",
+        label: "손님 반응이 무서워서 또 미룬다.",
+        score: { 인정: 2, 회피: 2, 양보: 1 },
+        evidenceTags: ["delay_price_raise"],
+      },
+      {
+        id: "B",
+        label: "일부 메뉴만 살짝 올리고 버텨본다.",
+        score: { 인정: 1, 회피: 1, 양보: 1 },
+        evidenceTags: ["half_raise"],
+      },
+      {
+        id: "C",
+        label: "원가와 수치를 보고 기준대로 조정한다.",
+        score: {},
+        evidenceTags: ["data_based_raise"],
+      },
+      {
+        id: "D",
+        label: "그냥 올리고 불만은 나중에 본다.",
+        score: {},
+        evidenceTags: ["hard_raise"],
+      },
+    ],
+  },
+  {
+    id: "q3",
+    type: "scenario",
+    text: "억울한 1점 리뷰가 달렸다.",
+    contextTags: ["손님"],
+    options: [
+      {
+        id: "A",
+        label: "빨리 끝내려고 환불이나 서비스를 제안한다.",
+        score: { 인정: 2, 양보: 2, 회피: 1 },
+        evidenceTags: ["overcompensate_review"],
+      },
+      {
+        id: "B",
+        label: "내 잘못이 아니어도 과하게 사과한다.",
+        score: { 인정: 2, 회피: 1, 양보: 1 },
+        evidenceTags: ["over_apology_review"],
+      },
+      {
+        id: "C",
+        label: "사실관계를 정리하고 기준에 맞게만 대응한다.",
+        score: {},
+        evidenceTags: ["measured_review_response"],
+      },
+      {
+        id: "D",
+        label: "기분 상해서 그냥 무시한다.",
+        score: {},
+        evidenceTags: ["ignore_review"],
+      },
+    ],
+  },
+  {
+    id: "q4",
+    type: "scenario",
+    text: "성과가 떨어지는 직원을 피드백해야 한다.",
+    contextTags: ["직원"],
+    options: [
+      {
+        id: "A",
+        label: "내가 대신 처리하면서 말은 아낀다.",
+        score: { 희생: 2, 회피: 2, 선: 1 },
+        evidenceTags: ["avoid_feedback"],
+      },
+      {
+        id: "B",
+        label: "좋게 돌려 말하다가 핵심을 못 말한다.",
+        score: { 회피: 2, 인정: 1, 선: 1 },
+        evidenceTags: ["soft_feedback"],
+      },
+      {
+        id: "C",
+        label: "구체적인 사례와 기대치를 명확히 말한다.",
+        score: {},
+        evidenceTags: ["clear_feedback"],
+      },
+      {
+        id: "D",
+        label: "답답해서 감정적으로 확 말한다.",
+        score: {},
+        evidenceTags: ["harsh_feedback"],
+      },
+    ],
+  },
+  {
+    id: "q5",
+    type: "scenario",
+    text: "단골이 메뉴에 없는 서비스를 부탁한다.",
+    contextTags: ["손님"],
+    options: [
+      {
+        id: "A",
+        label: "단골이니까 해준다.",
+        score: { 인정: 2, 양보: 2, 선: 1 },
+        evidenceTags: ["regular_exception"],
+      },
+      {
+        id: "B",
+        label: "오늘만 특별히 해준다.",
+        score: { 인정: 1, 양보: 1, 선: 1 },
+        evidenceTags: ["special_exception_once"],
+      },
+      {
+        id: "C",
+        label: "정중히 기준을 설명하고 대안을 제안한다.",
+        score: {},
+        evidenceTags: ["polite_boundary_customer"],
+      },
+      {
+        id: "D",
+        label: "단골이어도 안 된다고 바로 말한다.",
+        score: {},
+        evidenceTags: ["firm_customer_boundary"],
+      },
+    ],
+  },
+  {
+    id: "q6",
+    type: "scenario",
+    text: "가족이나 지인이 할인이나 외상을 부탁한다.",
+    contextTags: ["지인가족"],
+    options: [
+      {
+        id: "A",
+        label: "거의 원가 수준으로 맞춰준다.",
+        score: { 인정: 2, 양보: 2, 선: 2 },
+        evidenceTags: ["family_discount"],
+      },
+      {
+        id: "B",
+        label: "애매하게 조금 깎아준다.",
+        score: { 인정: 1, 양보: 1, 선: 1 },
+        evidenceTags: ["fuzzy_discount"],
+      },
+      {
+        id: "C",
+        label: "정해둔 지인 기준만 적용한다.",
+        score: {},
+        evidenceTags: ["defined_friend_rule"],
+      },
+      {
+        id: "D",
+        label: "지인 할인 자체를 운영하지 않는다.",
+        score: {},
+        evidenceTags: ["no_friend_exception"],
+      },
+    ],
+  },
+  {
+    id: "q7",
+    type: "scenario",
+    text: "직원 실수로 고객 컴플레인이 생겼다.",
+    contextTags: ["직원", "손님"],
+    options: [
+      {
+        id: "A",
+        label: "내가 대신 사과하고 수습한다.",
+        score: { 희생: 2, 인정: 1, 선: 1 },
+        evidenceTags: ["owner_rescues_staff"],
+      },
+      {
+        id: "B",
+        label: "일단 내가 막고, 나중에 살짝 말한다.",
+        score: { 희생: 1, 회피: 1, 선: 1 },
+        evidenceTags: ["delayed_staff_feedback"],
+      },
+      {
+        id: "C",
+        label: "직원이 직접 수습하게 하고 내가 옆에서 정리한다.",
+        score: {},
+        evidenceTags: ["coach_not_rescue"],
+      },
+      {
+        id: "D",
+        label: "직원 탓을 바로 고객 앞에서 한다.",
+        score: {},
+        evidenceTags: ["blame_staff_publicly"],
+      },
+    ],
+  },
+  {
+    id: "q8",
+    type: "scenario",
+    text: "몸이 안 좋아 쉬어야 하는 날이다.",
+    contextTags: ["자기자신"],
+    options: [
+      {
+        id: "A",
+        label: "내가 안 나가면 불안해서 그냥 연다.",
+        score: { 희생: 2, 선: 2 },
+        evidenceTags: ["cannot_rest"],
+      },
+      {
+        id: "B",
+        label: "반쯤 쉬다가 결국 다시 일한다.",
+        score: { 희생: 1, 선: 1 },
+        evidenceTags: ["half_rest"],
+      },
+      {
+        id: "C",
+        label: "휴무나 대체 운영으로 정리하고 쉰다.",
+        score: {},
+        evidenceTags: ["protect_rest"],
+      },
+      {
+        id: "D",
+        label: "아무 안내 없이 그냥 쉰다.",
+        score: {},
+        evidenceTags: ["disorganized_rest"],
+      },
+    ],
+  },
+  {
+    id: "q9",
+    type: "scenario",
+    text: "거래처가 반복적으로 느리거나 불성실하다.",
+    contextTags: ["거래처"],
+    options: [
+      {
+        id: "A",
+        label: "껄끄러워질까 봐 말을 미룬다.",
+        score: { 회피: 2, 선: 1 },
+        evidenceTags: ["delay_supplier_boundary"],
+      },
+      {
+        id: "B",
+        label: "부드럽게 한 번 말해보고 또 참는다.",
+        score: { 회피: 1, 인정: 1 },
+        evidenceTags: ["soft_supplier_boundary"],
+      },
+      {
+        id: "C",
+        label: "기한과 기준을 정리해서 명확하게 전달한다.",
+        score: {},
+        evidenceTags: ["clear_supplier_boundary"],
+      },
+      {
+        id: "D",
+        label: "바로 거래를 끊는다.",
+        score: {},
+        evidenceTags: ["hard_supplier_cutoff"],
+      },
+    ],
+  },
+  {
+    id: "q10",
+    type: "scenario",
+    text: "영업 끝난 뒤에도 손님 문의 메시지가 계속 온다.",
+    contextTags: ["손님", "자기자신"],
+    options: [
+      {
+        id: "A",
+        label: "늦은 밤에도 거의 바로 답한다.",
+        score: { 선: 2, 인정: 1, 희생: 1 },
+        evidenceTags: ["always_on_reply"],
+      },
+      {
+        id: "B",
+        label: "답 안 하면 불편해서 짧게라도 답한다.",
+        score: { 선: 1, 인정: 1, 회피: 1 },
+        evidenceTags: ["reply_out_of_guilt"],
+      },
+      {
+        id: "C",
+        label: "영업시간 안내와 자동응답 기준을 둔다.",
+        score: {},
+        evidenceTags: ["message_boundary"],
+      },
+      {
+        id: "D",
+        label: "다음날 필요할 때만 답한다.",
+        score: {},
+        evidenceTags: ["delayed_reply_ok"],
+      },
+    ],
+  },
+  {
+    id: "q11",
+    type: "scenario",
+    text: "손님이 가격이 비싸다고 직접 말한다.",
+    contextTags: ["손님"],
+    options: [
+      {
+        id: "A",
+        label: "미안해서 서비스나 할인을 더 얹는다.",
+        score: { 양보: 2, 인정: 1, 회피: 1 },
+        evidenceTags: ["discount_under_pressure"],
+      },
+      {
+        id: "B",
+        label: "이번만 맞춰주고 다음엔 안 된다고 생각한다.",
+        score: { 양보: 1, 회피: 1, 선: 1 },
+        evidenceTags: ["one_time_discount"],
+      },
+      {
+        id: "C",
+        label: "정책을 설명하고 대체 옵션만 안내한다.",
+        score: {},
+        evidenceTags: ["price_boundary"],
+      },
+      {
+        id: "D",
+        label: "기분 상해서 싸우듯 대응한다.",
+        score: {},
+        evidenceTags: ["defensive_response"],
+      },
+    ],
+  },
+  {
+    id: "q12",
+    type: "scenario",
+    text: "직원이 급여 선지급이나 개인적 도움을 요청한다.",
+    contextTags: ["직원"],
+    options: [
+      {
+        id: "A",
+        label: "부담돼도 어떻게든 도와준다.",
+        score: { 희생: 2, 선: 2, 인정: 1, 양보: 1 },
+        evidenceTags: ["financial_rescue"],
+      },
+      {
+        id: "B",
+        label: "이번 한 번만이라고 생각하고 도와준다.",
+        score: { 희생: 1, 선: 1, 인정: 1 },
+        evidenceTags: ["one_time_rescue"],
+      },
+      {
+        id: "C",
+        label: "원칙상 어렵다고 말하고 가능한 제도나 대안을 안내한다.",
+        score: {},
+        evidenceTags: ["policy_first_help"],
+      },
+      {
+        id: "D",
+        label: "이유도 안 듣고 바로 거절한다.",
+        score: {},
+        evidenceTags: ["cold_reject"],
+      },
+    ],
+  },
+  {
+    id: "q13",
+    type: "forced",
+    text: "둘 중 더 중요한 쪽에 가까운 것을 고르세요. (정답 없음)",
+    contextTags: ["직원"],
+    options: [
+      {
+        id: "A",
+        label: "사람들이 나를 편하게 느끼는 사장",
+        score: { 인정: 2 },
+        evidenceTags: ["want_to_be_liked"],
+      },
+      {
+        id: "B",
+        label: "사람들이 기준을 예측할 수 있는 사장",
+        score: {},
+        evidenceTags: ["predictable_leader"],
+      },
+    ],
+  },
+  {
+    id: "q14",
+    type: "forced",
+    text: "둘 중 내 기본 습관에 더 가까운 것을 고르세요.",
+    contextTags: ["직원", "자기자신"],
+    options: [
+      {
+        id: "A",
+        label: "문제는 내가 빨리 메우는 게 가장 빠르다",
+        score: { 희생: 2, 선: 1 },
+        evidenceTags: ["me_over_system"],
+      },
+      {
+        id: "B",
+        label: "문제는 내가 없어도 굴러가게 만드는 게 더 중요하다",
+        score: {},
+        evidenceTags: ["system_over_rescue"],
+      },
+    ],
+  },
+  {
+    id: "q15",
+    type: "forced",
+    text: "둘 중 더 자주 드는 생각을 고르세요.",
+    contextTags: ["직원", "손님"],
+    options: [
+      {
+        id: "A",
+        label: "지금 분위기가 어색해지는 게 너무 싫다",
+        score: { 회피: 2, 인정: 1 },
+        evidenceTags: ["avoid_tension"],
+      },
+      {
+        id: "B",
+        label: "할 말 안 해서 쌓이는 게 더 싫다",
+        score: {},
+        evidenceTags: ["prefer_clarity"],
+      },
+    ],
+  },
+  {
+    id: "q16",
+    type: "forced",
+    text: "장사하면서 더 먼저 떠오르는 쪽을 고르세요.",
+    contextTags: ["손님", "자기자신"],
+    options: [
+      {
+        id: "A",
+        label: "손님 실망을 줄이는 게 우선이다",
+        score: { 양보: 2, 인정: 1, 회피: 1 },
+        evidenceTags: ["protect_customer_feelings"],
+      },
+      {
+        id: "B",
+        label: "가게가 오래 버티는 기준을 지키는 게 우선이다",
+        score: {},
+        evidenceTags: ["protect_business_first"],
+      },
+    ],
+  },
+];
