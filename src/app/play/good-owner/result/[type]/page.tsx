@@ -6,6 +6,7 @@ import { getResultBySlug, results } from "@/data/results";
 import { relationCopy } from "@/data/relationCopy";
 import { relationFromSlug, getRiskLevel, riskLevelColor } from "@/lib/score";
 import type { ResultSlug } from "@/types/quiz";
+import ShareButtons from "@/components/ShareButtons";
 
 type SearchParams = {
   o?: string;
@@ -127,22 +128,33 @@ export default function ResultPage({ params, searchParams }: Props) {
           </div>
         )}
 
+        <div className="mt-6 rounded-2xl border border-white/60 bg-white/85 p-6 shadow-sm backdrop-blur-sm">
+          <h3 className="mb-4 text-sm font-bold text-slate-700">
+            📤 결과 공유하기
+          </h3>
+          <ShareButtons
+            title={`나는 ${result.type} 사장`}
+            description={result.oneLiner}
+            imageUrl={result.illustration}
+          />
+        </div>
+
         {searchParams.lc === "1" && (
           <div className="mt-6 rounded-xl border border-amber-200 bg-amber-50/80 p-4 text-sm leading-relaxed text-amber-800 backdrop-blur-sm">
             ⚠ 모범답안 위주로 선택하셔서 결과 정확도가 낮을 수 있어요. 솔직하게 한 번 더 해보면 다른 결과가 나올 수도 있습니다.
           </div>
         )}
 
-        <div className="mt-12 flex flex-col items-center gap-3">
+        <div className="mt-12 grid grid-cols-2 gap-3">
           <Link
             href="/play/good-owner/test"
-            className="rounded-xl bg-slate-900 px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-slate-700"
+            className="rounded-xl bg-slate-900 px-4 py-3 text-center text-sm font-semibold text-white shadow-sm transition hover:bg-slate-700"
           >
             다시 테스트하기
           </Link>
           <Link
             href="/"
-            className="text-xs text-slate-500 hover:text-slate-700"
+            className="rounded-xl border border-slate-300 bg-white px-4 py-3 text-center text-sm font-semibold text-slate-700 shadow-sm transition hover:bg-slate-50"
           >
             처음으로
           </Link>

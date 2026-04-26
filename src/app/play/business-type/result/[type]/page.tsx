@@ -4,6 +4,7 @@ import Image from "next/image";
 import type { Metadata } from "next";
 import { results, getBusinessTypeByKey } from "@/data/business-type/results";
 import type { BusinessType } from "@/types/business-type";
+import ShareButtons from "@/components/ShareButtons";
 
 type SearchParams = Record<string, string | undefined>;
 
@@ -97,14 +98,28 @@ export default function BusinessTypeResultPage({ params }: Props) {
           </p>
         </div>
 
-        <div className="mt-12 flex flex-col items-center gap-3">
+        <div className="mt-6 rounded-2xl border border-white/60 bg-white/85 p-6 shadow-sm backdrop-blur-sm">
+          <h3 className="mb-4 text-sm font-bold text-slate-700">
+            📤 결과 공유하기
+          </h3>
+          <ShareButtons
+            title={`나는 ${result.koreanName} 사장`}
+            description={result.oneLiner}
+            imageUrl={result.illustration}
+          />
+        </div>
+
+        <div className="mt-12 grid grid-cols-2 gap-3">
           <Link
             href="/play/business-type/test"
-            className="rounded-xl bg-slate-900 px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-slate-700"
+            className="rounded-xl bg-slate-900 px-4 py-3 text-center text-sm font-semibold text-white shadow-sm transition hover:bg-slate-700"
           >
             다시 테스트하기
           </Link>
-          <Link href="/" className="text-xs text-slate-500 hover:text-slate-700">
+          <Link
+            href="/"
+            className="rounded-xl border border-slate-300 bg-white px-4 py-3 text-center text-sm font-semibold text-slate-700 shadow-sm transition hover:bg-slate-50"
+          >
             처음으로
           </Link>
         </div>
