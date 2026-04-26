@@ -87,17 +87,32 @@ export default function Home() {
               </div>
             </Link>
 
-            <div className="overflow-hidden rounded-2xl border-2 border-dashed border-slate-300 bg-slate-50">
-              <div className="flex aspect-[16/9] items-center justify-center text-sm font-medium text-slate-400">
-                곧 공개
+            <Link
+              href="/play/business-type/test"
+              className="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
+            >
+              <div className="flex aspect-[16/9] items-center justify-center bg-gradient-to-br from-purple-600 via-pink-500 to-amber-500 text-white">
+                <div className="text-center">
+                  <div className="text-3xl tracking-wider">👑 🐪 ⚒️ 🌾</div>
+                  <div className="mt-1 text-3xl tracking-wider">🤝 🔥 📊</div>
+                  <p
+                    className="mt-3 text-lg font-bold drop-shadow-md"
+                    style={{ fontFamily: "'Gmarket Sans', Pretendard, sans-serif" }}
+                  >
+                    사장님 사업유형 테스트
+                  </p>
+                  <p className="mt-1 text-xs opacity-90">7가지 사장님 유형 중 나는?</p>
+                </div>
               </div>
               <div className="p-4">
-                <p className="text-base font-semibold text-slate-400">
-                  사업 유형 테스트
+                <p className="text-base font-semibold text-slate-900">
+                  사장님 사업유형 테스트
                 </p>
-                <p className="mt-1 text-xs text-slate-400">준비 중</p>
+                <p className="mt-1 text-xs text-slate-500">
+                  20문항 · 약 4분 · 무료
+                </p>
               </div>
-            </div>
+            </Link>
 
             <div className="overflow-hidden rounded-2xl border-2 border-dashed border-slate-300 bg-slate-50">
               <div className="flex aspect-[16/9] items-center justify-center text-sm font-medium text-slate-400">
