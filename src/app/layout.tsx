@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://play.assasup.com"),
   title: "아싸 놀이터 — 사장님 자기점검 콘텐츠",
   description:
     "사장님 착한아이 테스트 등 자영업자 자기점검 콘텐츠. 재미와 자기점검을 위한 콘텐츠이며 의학·심리 진단이 아닙니다.",
