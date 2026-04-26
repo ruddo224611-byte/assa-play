@@ -4,30 +4,30 @@ export const questions: Question[] = [
   {
     id: "q1",
     type: "scenario",
-    text: "직원이 이번 주말 근무를 또 바꿔달라고 한다.",
+    text: `또. 직원 카톡: "사장님 이번 주말 근무 좀 바꿔줄 수 있어요? ㅠㅠ"`,
     contextTags: ["직원"],
     options: [
       {
         id: "A",
-        label: "일단 내가 메꾸고 조용히 넘긴다.",
+        label: "응 그래... 내가 나갈게 (자동완성 됨)",
         score: { 희생: 2, 선: 2, 인정: 1 },
         evidenceTags: ["cover_shift"],
       },
       {
         id: "B",
-        label: "이번만 받아주고, 다음에 기준을 정하자고 한다.",
+        label: `"이번만이야~" 라고 한 게 다섯 번째쯤`,
         score: { 희생: 1, 선: 1, 회피: 1 },
         evidenceTags: ["soft_boundary_shift"],
       },
       {
         id: "C",
-        label: "다른 직원과 스왑을 먼저 시도하게 하고, 안 되면 규정대로 처리한다.",
+        label: `"다른 사람이랑 바꿀 수 있는지 먼저 봐 줘"`,
         score: {},
         evidenceTags: ["rule_first_shift"],
       },
       {
         id: "D",
-        label: "규정상 어렵다고 말하고, 대안은 본인이 찾게 한다.",
+        label: `"이번엔 어려워. 본인이 알아서 해 줘"`,
         score: {},
         evidenceTags: ["clear_shift_boundary"],
       },
@@ -36,30 +36,30 @@ export const questions: Question[] = [
   {
     id: "q2",
     type: "scenario",
-    text: "원가가 꽤 올랐고 가격 인상이 필요하다.",
+    text: "원가 또 올랐다. 가격 인상 미루는 중인데 어떻게 함?",
     contextTags: ["손님", "자기자신"],
     options: [
       {
         id: "A",
-        label: "손님 반응이 무서워서 또 미룬다.",
+        label: "그냥 또 미룬다... 손님들 떠날까봐 무서움",
         score: { 인정: 2, 회피: 2, 양보: 1 },
         evidenceTags: ["delay_price_raise"],
       },
       {
         id: "B",
-        label: "일부 메뉴만 살짝 올리고 버텨본다.",
+        label: "일부 메뉴만 100원 올림 (티 안 나게)",
         score: { 인정: 1, 회피: 1, 양보: 1 },
         evidenceTags: ["half_raise"],
       },
       {
         id: "C",
-        label: "원가와 수치를 보고 기준대로 조정한다.",
+        label: "원가표 보고 기준대로 올림",
         score: {},
         evidenceTags: ["data_based_raise"],
       },
       {
         id: "D",
-        label: "그냥 올리고 불만은 나중에 본다.",
+        label: "그냥 다 올림. 뭐 어쩔래",
         score: {},
         evidenceTags: ["hard_raise"],
       },
@@ -68,30 +68,30 @@ export const questions: Question[] = [
   {
     id: "q3",
     type: "scenario",
-    text: "억울한 1점 리뷰가 달렸다.",
+    text: "억울한 1점 리뷰 떴다. 클릭하니 화 솟구침.",
     contextTags: ["손님"],
     options: [
       {
         id: "A",
-        label: "빨리 끝내려고 환불이나 서비스를 제안한다.",
+        label: "일단 환불 제안... 빨리 끝내고 싶다",
         score: { 인정: 2, 양보: 2, 회피: 1 },
         evidenceTags: ["overcompensate_review"],
       },
       {
         id: "B",
-        label: "내 잘못이 아니어도 과하게 사과한다.",
+        label: "내 잘못 아닌데 일단 사과부터 9줄",
         score: { 인정: 2, 회피: 1, 양보: 1 },
         evidenceTags: ["over_apology_review"],
       },
       {
         id: "C",
-        label: "사실관계를 정리하고 기준에 맞게만 대응한다.",
+        label: "사실관계 정리해서 정중하게 답함",
         score: {},
         evidenceTags: ["measured_review_response"],
       },
       {
         id: "D",
-        label: "기분 상해서 그냥 무시한다.",
+        label: "그냥 무시하고 닫음",
         score: {},
         evidenceTags: ["ignore_review"],
       },
@@ -100,30 +100,30 @@ export const questions: Question[] = [
   {
     id: "q4",
     type: "scenario",
-    text: "성과가 떨어지는 직원을 피드백해야 한다.",
+    text: "성과 떨어지는 직원한테 한마디 해야 함. 마음의 준비 중.",
     contextTags: ["직원"],
     options: [
       {
         id: "A",
-        label: "내가 대신 처리하면서 말은 아낀다.",
+        label: "결국 못 함. 그냥 내가 다 처리함",
         score: { 희생: 2, 회피: 2, 선: 1 },
         evidenceTags: ["avoid_feedback"],
       },
       {
         id: "B",
-        label: "좋게 돌려 말하다가 핵심을 못 말한다.",
+        label: "좋게 빙빙 돌리다 핵심은 못 말함",
         score: { 회피: 2, 인정: 1, 선: 1 },
         evidenceTags: ["soft_feedback"],
       },
       {
         id: "C",
-        label: "구체적인 사례와 기대치를 명확히 말한다.",
+        label: "구체적으로 뭘 어떻게 해야 하는지 명확히 말함",
         score: {},
         evidenceTags: ["clear_feedback"],
       },
       {
         id: "D",
-        label: "답답해서 감정적으로 확 말한다.",
+        label: "빡쳐서 강하게 말해버림 (후회)",
         score: {},
         evidenceTags: ["harsh_feedback"],
       },
@@ -132,30 +132,30 @@ export const questions: Question[] = [
   {
     id: "q5",
     type: "scenario",
-    text: "단골이 메뉴에 없는 서비스를 부탁한다.",
+    text: `단골: "사장님 이거 메뉴엔 없는데 한 번만 해주실 수 있어요?"`,
     contextTags: ["손님"],
     options: [
       {
         id: "A",
-        label: "단골이니까 해준다.",
+        label: "단골이니까... 해줌",
         score: { 인정: 2, 양보: 2, 선: 1 },
         evidenceTags: ["regular_exception"],
       },
       {
         id: "B",
-        label: "오늘만 특별히 해준다.",
+        label: `"오늘만 특별히" 라는 말 또 입에서 나옴`,
         score: { 인정: 1, 양보: 1, 선: 1 },
         evidenceTags: ["special_exception_once"],
       },
       {
         id: "C",
-        label: "정중히 기준을 설명하고 대안을 제안한다.",
+        label: `"메뉴엔 없는데 비슷한 거로 추천드릴게요"`,
         score: {},
         evidenceTags: ["polite_boundary_customer"],
       },
       {
         id: "D",
-        label: "단골이어도 안 된다고 바로 말한다.",
+        label: `"안 됩니다. 메뉴대로 부탁드려요"`,
         score: {},
         evidenceTags: ["firm_customer_boundary"],
       },
@@ -164,30 +164,30 @@ export const questions: Question[] = [
   {
     id: "q6",
     type: "scenario",
-    text: "가족이나 지인이 할인이나 외상을 부탁한다.",
+    text: `친구가 가게 와서 "야 나 할인 좀 ㅋㅋ" 함.`,
     contextTags: ["지인가족"],
     options: [
       {
         id: "A",
-        label: "거의 원가 수준으로 맞춰준다.",
+        label: "거의 원가로 줌. 마음이 약함",
         score: { 인정: 2, 양보: 2, 선: 2 },
         evidenceTags: ["family_discount"],
       },
       {
         id: "B",
-        label: "애매하게 조금 깎아준다.",
+        label: "애매하게 깎아줌. 얼마인지도 모름",
         score: { 인정: 1, 양보: 1, 선: 1 },
         evidenceTags: ["fuzzy_discount"],
       },
       {
         id: "C",
-        label: "정해둔 지인 기준만 적용한다.",
+        label: "정해둔 지인 할인 기준대로만",
         score: {},
         evidenceTags: ["defined_friend_rule"],
       },
       {
         id: "D",
-        label: "지인 할인 자체를 운영하지 않는다.",
+        label: "친구도 정가야. 안 깎아줌",
         score: {},
         evidenceTags: ["no_friend_exception"],
       },
@@ -196,30 +196,30 @@ export const questions: Question[] = [
   {
     id: "q7",
     type: "scenario",
-    text: "직원 실수로 고객 컴플레인이 생겼다.",
+    text: "직원 실수로 손님 컴플레인 떴다. 사장님이 끼어들어야 함.",
     contextTags: ["직원", "손님"],
     options: [
       {
         id: "A",
-        label: "내가 대신 사과하고 수습한다.",
+        label: "내가 대신 사과하고 마무리함 (직원은 뒤에)",
         score: { 희생: 2, 인정: 1, 선: 1 },
         evidenceTags: ["owner_rescues_staff"],
       },
       {
         id: "B",
-        label: "일단 내가 막고, 나중에 살짝 말한다.",
+        label: "일단 내가 막고, 직원한테는 나중에 살짝",
         score: { 희생: 1, 회피: 1, 선: 1 },
         evidenceTags: ["delayed_staff_feedback"],
       },
       {
         id: "C",
-        label: "직원이 직접 수습하게 하고 내가 옆에서 정리한다.",
+        label: "직원이 직접 사과·수습하게 함 (옆에서 정리)",
         score: {},
         evidenceTags: ["coach_not_rescue"],
       },
       {
         id: "D",
-        label: "직원 탓을 바로 고객 앞에서 한다.",
+        label: `손님 앞에서 "얘가 잘못해서요..." (직원 탓)`,
         score: {},
         evidenceTags: ["blame_staff_publicly"],
       },
@@ -228,30 +228,30 @@ export const questions: Question[] = [
   {
     id: "q8",
     type: "scenario",
-    text: "몸이 안 좋아 쉬어야 하는 날이다.",
+    text: "몸살 났다. 쉬어야 함. 근데...",
     contextTags: ["자기자신"],
     options: [
       {
         id: "A",
-        label: "내가 안 나가면 불안해서 그냥 연다.",
+        label: "안 나가면 불안해서 그냥 가게 엶",
         score: { 희생: 2, 선: 2 },
         evidenceTags: ["cannot_rest"],
       },
       {
         id: "B",
-        label: "반쯤 쉬다가 결국 다시 일한다.",
+        label: "반쯤 쉬다가 결국 일하러 감",
         score: { 희생: 1, 선: 1 },
         evidenceTags: ["half_rest"],
       },
       {
         id: "C",
-        label: "휴무나 대체 운영으로 정리하고 쉰다.",
+        label: "휴무 안내 깔끔히 올리고 진짜 쉼",
         score: {},
         evidenceTags: ["protect_rest"],
       },
       {
         id: "D",
-        label: "아무 안내 없이 그냥 쉰다.",
+        label: "그냥 안 나감. 안내도 안 함",
         score: {},
         evidenceTags: ["disorganized_rest"],
       },
@@ -260,30 +260,30 @@ export const questions: Question[] = [
   {
     id: "q9",
     type: "scenario",
-    text: "거래처가 반복적으로 느리거나 불성실하다.",
+    text: "거래처가 또 늦게 옴. 또 빠뜨림. 짜증 1톤.",
     contextTags: ["거래처"],
     options: [
       {
         id: "A",
-        label: "껄끄러워질까 봐 말을 미룬다.",
+        label: "껄끄러워서 말 못 함. 또 참음",
         score: { 회피: 2, 선: 1 },
         evidenceTags: ["delay_supplier_boundary"],
       },
       {
         id: "B",
-        label: "부드럽게 한 번 말해보고 또 참는다.",
+        label: `"다음엔 좀 미리..." 부드럽게 한 번 → 또 참음`,
         score: { 회피: 1, 인정: 1 },
         evidenceTags: ["soft_supplier_boundary"],
       },
       {
         id: "C",
-        label: "기한과 기준을 정리해서 명확하게 전달한다.",
+        label: "기한·기준 명확히 정리해서 정식 항의",
         score: {},
         evidenceTags: ["clear_supplier_boundary"],
       },
       {
         id: "D",
-        label: "바로 거래를 끊는다.",
+        label: "거래 끊음. 끝.",
         score: {},
         evidenceTags: ["hard_supplier_cutoff"],
       },
@@ -292,30 +292,30 @@ export const questions: Question[] = [
   {
     id: "q10",
     type: "scenario",
-    text: "영업 끝난 뒤에도 손님 문의 메시지가 계속 온다.",
+    text: `밤 11시. 손님 카톡: "내일 가도 돼요?"`,
     contextTags: ["손님", "자기자신"],
     options: [
       {
         id: "A",
-        label: "늦은 밤에도 거의 바로 답한다.",
+        label: "밤이어도 거의 바로 답함",
         score: { 선: 2, 인정: 1, 희생: 1 },
         evidenceTags: ["always_on_reply"],
       },
       {
         id: "B",
-        label: "답 안 하면 불편해서 짧게라도 답한다.",
+        label: "답 안 하면 마음 불편해서 짧게라도 답",
         score: { 선: 1, 인정: 1, 회피: 1 },
         evidenceTags: ["reply_out_of_guilt"],
       },
       {
         id: "C",
-        label: "영업시간 안내와 자동응답 기준을 둔다.",
+        label: "영업시간 외 자동응답 깔아둠",
         score: {},
         evidenceTags: ["message_boundary"],
       },
       {
         id: "D",
-        label: "다음날 필요할 때만 답한다.",
+        label: "다음날 아침에 답하거나 안 답함",
         score: {},
         evidenceTags: ["delayed_reply_ok"],
       },
@@ -324,30 +324,30 @@ export const questions: Question[] = [
   {
     id: "q11",
     type: "scenario",
-    text: "손님이 가격이 비싸다고 직접 말한다.",
+    text: `손님: "이 집 가격이 비싼 편이네요?" (앞에서 직접)`,
     contextTags: ["손님"],
     options: [
       {
         id: "A",
-        label: "미안해서 서비스나 할인을 더 얹는다.",
+        label: "미안해서 서비스 더 얹어줌",
         score: { 양보: 2, 인정: 1, 회피: 1 },
         evidenceTags: ["discount_under_pressure"],
       },
       {
         id: "B",
-        label: "이번만 맞춰주고 다음엔 안 된다고 생각한다.",
+        label: `"이번만 맞춰드릴게요" 후 "다음엔 안 됨" 다짐`,
         score: { 양보: 1, 회피: 1, 선: 1 },
         evidenceTags: ["one_time_discount"],
       },
       {
         id: "C",
-        label: "정책을 설명하고 대체 옵션만 안내한다.",
+        label: "가격 정책 차분히 설명. 끝.",
         score: {},
         evidenceTags: ["price_boundary"],
       },
       {
         id: "D",
-        label: "기분 상해서 싸우듯 대응한다.",
+        label: "빡쳐서 싸우듯 대응",
         score: {},
         evidenceTags: ["defensive_response"],
       },
@@ -356,30 +356,30 @@ export const questions: Question[] = [
   {
     id: "q12",
     type: "scenario",
-    text: "직원이 급여 선지급이나 개인적 도움을 요청한다.",
+    text: `직원: "사장님... 급여 좀 미리 받을 수 있을까요? ㅠ"`,
     contextTags: ["직원"],
     options: [
       {
         id: "A",
-        label: "부담돼도 어떻게든 도와준다.",
+        label: "부담돼도 어떻게든 도와줌",
         score: { 희생: 2, 선: 2, 인정: 1, 양보: 1 },
         evidenceTags: ["financial_rescue"],
       },
       {
         id: "B",
-        label: "이번 한 번만이라고 생각하고 도와준다.",
+        label: `"이번 한 번만이야" 도와줌 (또 그럴 예정)`,
         score: { 희생: 1, 선: 1, 인정: 1 },
         evidenceTags: ["one_time_rescue"],
       },
       {
         id: "C",
-        label: "원칙상 어렵다고 말하고 가능한 제도나 대안을 안내한다.",
+        label: "원칙대로 안 된다고 말하고 가능한 제도 안내",
         score: {},
         evidenceTags: ["policy_first_help"],
       },
       {
         id: "D",
-        label: "이유도 안 듣고 바로 거절한다.",
+        label: "이유도 안 듣고 바로 거절",
         score: {},
         evidenceTags: ["cold_reject"],
       },
@@ -388,7 +388,7 @@ export const questions: Question[] = [
   {
     id: "q13",
     type: "forced",
-    text: "둘 중 더 중요한 쪽에 가까운 것을 고르세요. (정답 없음)",
+    text: "둘 중 더 가까운 거? (정답 없음)",
     contextTags: ["직원"],
     options: [
       {
@@ -399,7 +399,7 @@ export const questions: Question[] = [
       },
       {
         id: "B",
-        label: "사람들이 기준을 예측할 수 있는 사장",
+        label: "사람들이 나를 예측 가능한 사장으로 느낌",
         score: {},
         evidenceTags: ["predictable_leader"],
       },
@@ -408,18 +408,18 @@ export const questions: Question[] = [
   {
     id: "q14",
     type: "forced",
-    text: "둘 중 내 기본 습관에 더 가까운 것을 고르세요.",
+    text: "내 진짜 습관에 더 가까운 거?",
     contextTags: ["직원", "자기자신"],
     options: [
       {
         id: "A",
-        label: "문제는 내가 빨리 메우는 게 가장 빠르다",
+        label: "문제 생기면 내가 빨리 메우는 게 답",
         score: { 희생: 2, 선: 1 },
         evidenceTags: ["me_over_system"],
       },
       {
         id: "B",
-        label: "문제는 내가 없어도 굴러가게 만드는 게 더 중요하다",
+        label: "내가 없어도 굴러가게 만드는 게 답",
         score: {},
         evidenceTags: ["system_over_rescue"],
       },
@@ -428,18 +428,18 @@ export const questions: Question[] = [
   {
     id: "q15",
     type: "forced",
-    text: "둘 중 더 자주 드는 생각을 고르세요.",
+    text: "더 자주 드는 생각?",
     contextTags: ["직원", "손님"],
     options: [
       {
         id: "A",
-        label: "지금 분위기가 어색해지는 게 너무 싫다",
+        label: "분위기 어색해지는 거 너무 싫음",
         score: { 회피: 2, 인정: 1 },
         evidenceTags: ["avoid_tension"],
       },
       {
         id: "B",
-        label: "할 말 안 해서 쌓이는 게 더 싫다",
+        label: "할 말 안 해서 쌓이는 게 더 싫음",
         score: {},
         evidenceTags: ["prefer_clarity"],
       },
@@ -448,18 +448,18 @@ export const questions: Question[] = [
   {
     id: "q16",
     type: "forced",
-    text: "장사하면서 더 먼저 떠오르는 쪽을 고르세요.",
+    text: "장사하면서 더 먼저 드는 생각?",
     contextTags: ["손님", "자기자신"],
     options: [
       {
         id: "A",
-        label: "손님 실망을 줄이는 게 우선이다",
+        label: "손님 실망 줄이는 게 1순위",
         score: { 양보: 2, 인정: 1, 회피: 1 },
         evidenceTags: ["protect_customer_feelings"],
       },
       {
         id: "B",
-        label: "가게가 오래 버티는 기준을 지키는 게 우선이다",
+        label: "가게 오래 버티는 기준 지키는 게 1순위",
         score: {},
         evidenceTags: ["protect_business_first"],
       },

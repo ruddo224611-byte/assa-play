@@ -15,34 +15,33 @@ type ResultRule = {
 // 스펙 11번 — 위에서부터 순서대로 평가, 가장 먼저 매치되는 타입 반환
 const rules: ResultRule[] = [
   {
-    type: "선긋는 배려형",
+    type: "선긋기 마스터",
     match: ({ overall, maxAxis }) => overall < 28 && maxAxis < 55,
   },
   {
-    type: "착한아이 총괄형",
+    type: "천사 사장형",
     match: ({ overall, countAxisOver60 }) =>
       overall >= 75 && countAxisOver60 >= 4,
   },
   {
-    type: "기준유실형",
+    type: "기준없음 사장형",
     match: ({ axes }) => axes["선"] >= 62 && axes["양보"] >= 62,
   },
   {
-    type: "구원자형",
+    type: "슈퍼맨 사장형",
     match: ({ axes }) => axes["희생"] >= 68,
   },
   {
-    type: "인정중독형",
+    type: "굿보이 사장형",
     match: ({ axes }) => axes["인정"] >= 68,
   },
   {
-    type: "평화유지형",
+    type: "입꾹닫 사장형",
     match: ({ axes }) => axes["회피"] >= 62,
   },
 ];
 
-// 매치되는 룰이 없으면 기본값
-const defaultResultType: ResultType = "평화유지형";
+const defaultResultType: ResultType = "입꾹닫 사장형";
 
 export function classifyResult(p: RuleParams): ResultType {
   for (const rule of rules) {
