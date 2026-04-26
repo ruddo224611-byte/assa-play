@@ -50,23 +50,13 @@ export default function Home() {
         </svg>
       </section>
 
-      {/* Test cards */}
+      {/* Test cards (이미지만, 캡션 없음) */}
       <section className="bg-white px-4 py-12 sm:px-8 md:px-12 lg:px-16 xl:px-20">
         <div className="mx-auto max-w-6xl">
-          <h2
-            className="text-center text-2xl font-bold text-slate-900 sm:text-3xl"
-            style={{ fontFamily: "'Gmarket Sans', Pretendard, sans-serif" }}
-          >
-            전체 테스트
-          </h2>
-          <p className="mt-2 text-center text-sm text-slate-500">
-            지금 바로 풀어볼 수 있는 사장님 자기점검 테스트
-          </p>
-
-          <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
             <Link
               href="/play/good-owner/test"
-              className="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
+              className="group block overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
             >
               <div className="aspect-[16/9] overflow-hidden bg-slate-900">
                 <Image
@@ -77,59 +67,23 @@ export default function Home() {
                   className="h-full w-full object-cover transition group-hover:scale-105"
                 />
               </div>
-              <div className="p-4">
-                <p className="text-base font-semibold text-slate-900">
-                  사장님 착한아이 테스트
-                </p>
-                <p className="mt-1 text-xs text-slate-500">
-                  16문항 · 약 3분 · 무료
-                </p>
-              </div>
             </Link>
 
             <Link
               href="/play/business-type/test"
-              className="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
+              className="group block overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
             >
-              <div className="flex aspect-[16/9] items-center justify-center bg-gradient-to-br from-purple-600 via-pink-500 to-amber-500 text-white">
-                <div className="text-center">
-                  <div className="text-3xl tracking-wider">👑 🐪 ⚒️ 🌾</div>
-                  <div className="mt-1 text-3xl tracking-wider">🤝 🔥 📊</div>
-                  <p
-                    className="mt-3 text-lg font-bold drop-shadow-md"
-                    style={{ fontFamily: "'Gmarket Sans', Pretendard, sans-serif" }}
-                  >
-                    사장님 사업유형 테스트
-                  </p>
-                  <p className="mt-1 text-xs opacity-90">7가지 사장님 유형 중 나는?</p>
-                </div>
-              </div>
-              <div className="p-4">
-                <p className="text-base font-semibold text-slate-900">
-                  사장님 사업유형 테스트
-                </p>
-                <p className="mt-1 text-xs text-slate-500">
-                  20문항 · 약 4분 · 무료
-                </p>
+              <div className="aspect-[16/9] overflow-hidden bg-slate-100">
+                <Image
+                  src="/cards/business-type.png"
+                  alt="사장님 사업유형 테스트"
+                  width={1200}
+                  height={648}
+                  className="h-full w-full object-cover transition group-hover:scale-105"
+                />
               </div>
             </Link>
-
-            <div className="overflow-hidden rounded-2xl border-2 border-dashed border-slate-300 bg-slate-50">
-              <div className="flex aspect-[16/9] items-center justify-center text-sm font-medium text-slate-400">
-                곧 공개
-              </div>
-              <div className="p-4">
-                <p className="text-base font-semibold text-slate-400">
-                  다음 테스트
-                </p>
-                <p className="mt-1 text-xs text-slate-400">준비 중</p>
-              </div>
-            </div>
           </div>
-
-          <p className="mt-12 text-center text-xs text-slate-400">
-            ※ 이 사이트의 테스트는 재미와 자기점검을 위한 콘텐츠이며, 의학적·심리학적 진단이 아닙니다.
-          </p>
         </div>
       </section>
     </div>

@@ -8,6 +8,7 @@ export const results: Record<BusinessType, BusinessTypeDefinition> = {
     type: "conqueror",
     koreanName: "정복자형",
     emoji: "👑",
+    illustration: "/illustrations/conqueror.png",
     oneLiner: "세상을 바꾸거나, 지배하거나",
     longDescription: `사장님은 가게가 조금만 자리를 잡아도 그다음 그림이 먼저 보이시는 분 같아요. 보통은 1호점 매출이 안정되면 한숨 돌리기 마련인데, 사장님은 그때부터 2호점 입지, 배달 동선, 직원 구조, 간판 통일감까지 머릿속에서 판이 벌어지시는 편이시지요. 카페라면 테이블 회전보다 브랜드 확장 동선을 먼저 보고, 식당이라면 점심 피크가 잘 나오기 시작할 때 이미 상권 옆 블록 공실까지 체크하실 수 있어요. 소매점이어도 한 매장 매출만 보지 않고, 이 상품 구성을 다른 동네에서도 먹힐지부터 떠올리시는 흐름이 있습니다. 그래서 직원이 보기엔 사장님이 늘 한 수 앞을 보시는 것처럼 느껴지고, 거래처도 사장님 이야기만 들으면 괜히 일이 커질 것 같은 기운을 받습니다.
 
@@ -22,6 +23,7 @@ export const results: Record<BusinessType, BusinessTypeDefinition> = {
     type: "nomad",
     koreanName: "유목민형",
     emoji: "🐪",
+    illustration: "/illustrations/nomad.png",
     oneLiner: "일하는 방식은 내가 정한다",
     longDescription: `사장님은 한자리에 오래 묶여 있을 때보다, 새로운 공기 속에서 더 살아나시는 분 같아요. 같은 메뉴를 같은 자리에서 몇 달만 반복해도 몸은 가게에 있어도 마음은 벌써 다른 동네를 보고 계실 수 있지요. 카페라면 계절 팝업이나 원데이 콜라보에 유난히 눈이 가고, 식당이라면 상설 매장보다 축제 부스나 야시장 같은 현장에서 오히려 감이 살아나실 수 있어요. 소매점이어도 한 매장만 지키기보다 온라인 마켓, 플리마켓, 지역 행사, 위탁 판매를 엮을 때 더 사장님답게 움직이시는 흐름이 있습니다. 새 플랫폼이 나오면 남들보다 먼저 계정을 만들고, 낯선 상권에 가면 불안보다 호기심이 먼저 드는 분 같아요.
 
@@ -36,6 +38,7 @@ export const results: Record<BusinessType, BusinessTypeDefinition> = {
     type: "craftsman",
     koreanName: "장인형",
     emoji: "⚒️",
+    illustration: "/illustrations/craftsman.png",
     oneLiner: "내 이름이 곧 브랜드",
     longDescription: `사장님은 가게를 운영하신다기보다, 한 분야를 평생 다듬고 계신 분 같아요. 카페라면 원두 한 가지의 향미 차이를 계절 따라 다르게 읽으시고, 식당이라면 국물 온도 1도나 면 삶는 초 단위에도 예민하실 수 있지요. 소매점이어도 물건 하나를 고를 때 유행보다 만듦새, 마감, 손에 닿는 느낌을 먼저 보시는 편 같아요. 그래서 손님이 보기엔 메뉴가 단순해 보여도, 사장님 안에는 그 한 가지를 얼마나 오래 들여다보셨는지가 켜켜이 쌓여 있습니다. 대충 이 정도면 됐지라는 말이 잘 안 맞고, 사장님 이름이 곧 가게 이름처럼 붙는 흐름이 있어요. 손님도 결국 사장님 손끝을 믿고 오는 경우가 많습니다.
 
@@ -50,6 +53,7 @@ export const results: Record<BusinessType, BusinessTypeDefinition> = {
     type: "farmer",
     koreanName: "농부형",
     emoji: "🌾",
+    illustration: "/illustrations/farmer.png",
     oneLiner: "천천히, 꾸준히, 오래",
     longDescription: `사장님은 빠르게 치고 나가는 분이라기보다, 한 자리를 오래 따뜻하게 만드는 분 같아요. 카페라면 아침마다 늘 비슷한 시간에 오시는 손님 얼굴을 먼저 기억하시고, 식당이라면 단골이 국물 간 조금 약하게 해달라는 취향까지 몸에 익어 있으실 수 있지요. 소매점이어도 새 손님을 크게 떠들기보다, 한 번 온 사람이 두 번 오게 만드는 힘이 더 강하신 편 같아요. 그래서 겉으로 보면 화려한 이벤트가 없어도 가게가 쉽게 꺼지지 않습니다. 손님이 사장님 가게를 찾는 이유가 특별한 자극보다 익숙한 안정감인 경우가 많기 때문입니다. 같은 간판 아래 같은 인사, 같은 맛, 같은 자리에 있는 것만으로도 누군가에게는 큰 안심이 되거든요.
 
@@ -64,6 +68,7 @@ export const results: Record<BusinessType, BusinessTypeDefinition> = {
     type: "collaborator",
     koreanName: "협력자형",
     emoji: "🤝",
+    illustration: "/illustrations/collaborator.png",
     oneLiner: "함께가 답이다",
     longDescription: `사장님은 혼자 잘하는 것보다, 같이 잘되는 그림에서 힘이 나는 분 같아요. 카페를 하셔도 직원이 의견을 내면 그냥 듣고 넘기지 않고 꼭 반영할 부분을 찾으시고, 식당을 운영하셔도 옆 가게 사장님들과 정보를 주고받으면서 상권 분위기를 읽는 편이시지요. 소매점이어도 혼자만 잘 파는 것보다 동네 행사, 공동 프로모션, 온라인 커뮤니티 반응을 함께 보는 쪽에서 감이 살아나실 수 있어요. 그래서 사장님 주변엔 늘 사람이 있습니다. 손님도 사장님을 가게 주인보다 동네 사람으로 느끼고, 직원도 사장님을 관리자보다 대화되는 사람으로 느끼는 경우가 많아요. 단골이 사장님께 다른 가게 이야기를 편하게 하고, 옆 상인도 무슨 일 생기면 먼저 사장님께 연락하는 흐름이 있지요.
 
@@ -78,6 +83,7 @@ export const results: Record<BusinessType, BusinessTypeDefinition> = {
     type: "adventurer",
     koreanName: "모험가형",
     emoji: "🔥",
+    illustration: "/illustrations/adventurer.png",
     oneLiner: "일단 해보고 본다",
     longDescription: `사장님은 오래 계산한 뒤 움직이기보다, 감이 오면 일단 몸으로 확인해 보시는 분 같아요. 요즘 뜨는 메뉴가 보이면 다음 주가 아니라 이번 주 안에 한 번 테스트해 보고 싶어지고, 해외 사례나 인스타 릴스를 보면 우리 매장에선 이렇게 바꿔보면 되겠다 하고 바로 그림이 그려지실 수 있지요. 카페라면 시즌 음료나 디저트 반응을 누구보다 빨리 붙이고, 식당이라면 신메뉴나 사이드 구성을 빠르게 바꾸며 손님 반응을 보시는 편이실 거예요. 소매점이어도 진열, 패키지, 프로모션 문구를 오래 붙들기보다 우선 걸어 보고 반응을 보는 식이 잘 맞으실 수 있습니다. 그래서 사장님 가게는 늘 뭔가 새롭고, 손님도 여긴 가면 또 뭘 하셨을까 하는 기대를 갖게 되지요.
 
@@ -92,6 +98,7 @@ export const results: Record<BusinessType, BusinessTypeDefinition> = {
     type: "strategist",
     koreanName: "전략가형",
     emoji: "📊",
+    illustration: "/illustrations/strategist.png",
     oneLiner: "숫자가 먼저다",
     longDescription: `사장님은 감이 없어서 숫자를 보시는 분이 아니라, 숫자 속에서 사람 움직임을 읽으시는 분 같아요. 카페라면 시간대별 주문 수와 객단가를 보고 어느 시간에 어떤 메뉴를 밀어야 하는지 감을 잡으시고, 식당이라면 원가율과 회전률을 보면서 어떤 메뉴가 진짜 효자인지 바로 구분하실 수 있지요. 소매점이어도 매대 위치별 판매량, 재구매 주기, 할인 반응을 자주 들여다보시는 편 같아요. 그래서 누군가는 대충 느낌으로 넘어갈 문제도, 사장님은 매출표를 열어 보면 이유가 보여요. 평일 오후 매출이 왜 비는지, 어떤 직원이 들어간 날 리뷰가 좋아지는지, 어떤 메뉴가 손님은 좋아해도 실제로는 남는 게 적은지 차분하게 짚어내실 수 있습니다. 사장님 머릿속에는 가게가 그냥 공간이 아니라 흐름표처럼 잡혀 있는 것 같아요.
 
