@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -33,16 +34,27 @@ export default function Home() {
 
         <div className="mt-16 grid grid-cols-3 gap-4 sm:grid-cols-6">
           {[
-            { e: "🛡️", n: "선긋기" },
-            { e: "🐶", n: "굿보이" },
-            { e: "🤐", n: "입꾹닫" },
-            { e: "🦸", n: "슈퍼맨" },
-            { e: "🌪️", n: "기준없음" },
-            { e: "😇", n: "천사" },
+            { src: "/illustrations/boundary-keeper.png", n: "선긋기" },
+            { src: "/illustrations/approval-seeker.png", n: "굿보이" },
+            { src: "/illustrations/peacekeeper.png", n: "입꾹닫" },
+            { src: "/illustrations/rescuer.png", n: "슈퍼맨" },
+            { src: "/illustrations/drift.png", n: "기준없음" },
+            { src: "/illustrations/people-pleaser.png", n: "천사" },
           ].map((t) => (
-            <div key={t.n} className="rounded-xl border border-slate-200 bg-white p-3 text-center">
-              <div className="text-3xl">{t.e}</div>
-              <div className="mt-1 text-xs text-slate-500">{t.n}</div>
+            <div
+              key={t.n}
+              className="overflow-hidden rounded-xl border border-slate-200 bg-white p-2 text-center shadow-sm"
+            >
+              <div className="aspect-square overflow-hidden rounded-lg">
+                <Image
+                  src={t.src}
+                  alt={t.n}
+                  width={120}
+                  height={120}
+                  className="h-full w-full object-cover"
+                />
+              </div>
+              <div className="mt-2 text-xs font-medium text-slate-600">{t.n}</div>
             </div>
           ))}
         </div>

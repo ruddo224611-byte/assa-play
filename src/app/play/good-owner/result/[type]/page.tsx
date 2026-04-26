@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import type { Metadata } from "next";
 import { getResultBySlug, results } from "@/data/results";
 import { evidenceCopy } from "@/data/evidenceCopy";
@@ -61,8 +62,13 @@ export function generateMetadata({ params }: Props): Metadata {
   const result = getResultBySlug(params.type);
   if (!result) return {};
   return {
-    title: `${result.emoji} ${result.type} — 사장님 착한아이 테스트 결과`,
+    title: `${result.type} — 사장님 착한아이 테스트 결과`,
     description: result.oneLiner,
+    openGraph: {
+      title: `${result.type} — 사장님 착한아이 테스트`,
+      description: result.oneLiner,
+      images: [{ url: result.illustration, width: 800, height: 800 }],
+    },
   };
 }
 
@@ -85,11 +91,18 @@ export default function ResultPage({ params, searchParams }: Props) {
     >
       <div className="mx-auto max-w-2xl px-4 py-12 sm:py-16">
         <div className="text-center">
-          <div className="mx-auto inline-block text-7xl sm:text-8xl drop-shadow-sm">
-            {result.emoji}
+          <div className="mx-auto overflow-hidden rounded-3xl border-4 border-white/80 bg-white/40 shadow-lg backdrop-blur-sm" style={{ width: 240, height: 240 }}>
+            <Image
+              src={result.illustration}
+              alt={result.type}
+              width={240}
+              height={240}
+              priority
+              className="h-full w-full object-cover"
+            />
           </div>
           <h1
-            className="mt-4 text-3xl font-bold leading-tight text-slate-900 sm:text-4xl"
+            className="mt-6 text-3xl font-bold leading-tight text-slate-900 sm:text-4xl"
             style={{ fontFamily: "'Gmarket Sans', Pretendard, sans-serif" }}
           >
             {result.type}

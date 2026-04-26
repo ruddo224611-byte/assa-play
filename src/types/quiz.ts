@@ -44,6 +44,7 @@ export type ResultDefinition = {
   type: ResultType;
   slug: ResultSlug;
   emoji: string;
+  illustration: string;
   oneLiner: string;
   description: string;
   hiddenCosts: string[];

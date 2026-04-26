@@ -5,6 +5,7 @@ export const results: Record<ResultType, ResultDefinition> = {
     type: "선긋기 마스터",
     slug: "boundary-keeper",
     emoji: "🛡️",
+    illustration: "/illustrations/boundary-keeper.png",
     oneLiner: "배려는 하는데 기준은 안 무너지는 타입",
     description: `너 = 친절한데 호락호락 안 함.
 싫은 손님 싫다고 말함.
@@ -27,6 +28,7 @@ export const results: Record<ResultType, ResultDefinition> = {
     type: "굿보이 사장형",
     slug: "approval-seeker",
     emoji: "🐶",
+    illustration: "/illustrations/approval-seeker.png",
     oneLiner: "손님한테 좋게 보이려다 본인만 갈리는 타입",
     description: `너 = 카운터 뒤에서 항상 웃고 있음.
 
@@ -51,6 +53,7 @@ export const results: Record<ResultType, ResultDefinition> = {
     type: "입꾹닫 사장형",
     slug: "peacekeeper",
     emoji: "🤐",
+    illustration: "/illustrations/peacekeeper.png",
     oneLiner: "작은 갈등 피하다가 큰 거 한 방에 터지는 타입",
     description: `너 = 분위기 망치는 거 죽기보다 싫음.
 
@@ -75,6 +78,7 @@ export const results: Record<ResultType, ResultDefinition> = {
     type: "슈퍼맨 사장형",
     slug: "rescuer",
     emoji: "🦸",
+    illustration: "/illustrations/rescuer.png",
     oneLiner: "문제 생기면 시스템보다 본인이 먼저 뛰어드는 타입",
     description: `너 = 빈틈 보이면 몸이 먼저 움직임.
 
@@ -98,6 +102,7 @@ export const results: Record<ResultType, ResultDefinition> = {
     type: "기준없음 사장형",
     slug: "drift",
     emoji: "🌪️",
+    illustration: "/illustrations/drift.png",
     oneLiner: "정 많고 눈치 빠른데 기준이 자꾸 없어지는 타입",
     description: `너 = 마음이 너무 좋음.
 
@@ -123,6 +128,7 @@ export const results: Record<ResultType, ResultDefinition> = {
     type: "천사 사장형",
     slug: "people-pleaser",
     emoji: "😇",
+    illustration: "/illustrations/people-pleaser.png",
     oneLiner: "좋은 사람이어야 한다는 압박이 가게 전체를 흔드는 타입",
     description: `너 = 직원·손님·지인·거래처·심지어 본인한테까지 선을 못 그음.
 
