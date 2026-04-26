@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -24,6 +25,10 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
+        <Script
+          src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.4/kakao.min.js"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );
