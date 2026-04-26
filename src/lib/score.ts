@@ -4,6 +4,7 @@ import type {
   AxisScores,
   RelationScores,
   QuizResult,
+  RiskLevel,
 } from "@/types/quiz";
 import { questions } from "@/data/questions";
 import { results } from "@/data/results";
@@ -215,3 +216,23 @@ export function relationFromSlug(slug: string | undefined): Relation | null {
   if (!slug) return null;
   return SLUG_TO_RELATION[slug] ?? null;
 }
+
+// 6단계 위험 라벨 (착한아이 정도) — 사장님 합의 (2026-04-27)
+// 임계값: 100점을 6등분 (대략 16.67점씩)
+export function getRiskLevel(score: number): RiskLevel {
+  if (score < 17) return "매우낮음";
+  if (score < 34) return "낮음";
+  if (score < 51) return "보통";
+  if (score < 68) return "주의";
+  if (score < 84) return "심각";
+  return "매우심각";
+}
+
+export const riskLevelColor: Record<RiskLevel, string> = {
+  매우낮음: "bg-blue-500",
+  낮음: "bg-emerald-500",
+  보통: "bg-yellow-500",
+  주의: "bg-orange-500",
+  심각: "bg-red-500",
+  매우심각: "bg-red-700",
+};
