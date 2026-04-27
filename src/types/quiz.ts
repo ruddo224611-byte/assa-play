@@ -44,6 +44,7 @@ export type Question = {
   type: QuestionType;
   text: string;
   subtitle?: string;
+  illustration?: string;
   contextTags: Relation[];
   options: QuestionOption[];
 };

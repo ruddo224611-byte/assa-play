@@ -3,6 +3,7 @@ import type { Question } from "@/types/quiz";
 export const questions: Question[] = [
   {
     id: "q1",
+    illustration: "/illustrations/good-owner/q1.png",
     type: "scenario",
     text: `또. 직원 카톡: "사장님 이번 주말 근무 좀 바꿔줄 수 있어요? ㅠㅠ"`,
     contextTags: ["직원"],
@@ -67,6 +68,7 @@ export const questions: Question[] = [
   },
   {
     id: "q3",
+    illustration: "/illustrations/good-owner/q3.png",
     type: "scenario",
     text: "억울한 1점 리뷰 떴다. 클릭하니 화 솟구침.",
     contextTags: ["손님"],
@@ -131,6 +133,7 @@ export const questions: Question[] = [
   },
   {
     id: "q5",
+    illustration: "/illustrations/good-owner/q5.png",
     type: "scenario",
     text: `단골: "사장님 이거 메뉴엔 없는데 한 번만 해주실 수 있어요?"`,
     contextTags: ["손님"],
@@ -163,6 +166,7 @@ export const questions: Question[] = [
   },
   {
     id: "q6",
+    illustration: "/illustrations/good-owner/q6.png",
     type: "scenario",
     text: `친구가 가게 와서 "야 나 할인 좀 ㅋㅋ" 함.`,
     contextTags: ["지인가족"],
@@ -227,6 +231,7 @@ export const questions: Question[] = [
   },
   {
     id: "q8",
+    illustration: "/illustrations/good-owner/q8.png",
     type: "scenario",
     text: "몸살 났다. 쉬어야 함. 근데...",
     contextTags: ["자기자신"],
@@ -259,6 +264,7 @@ export const questions: Question[] = [
   },
   {
     id: "q9",
+    illustration: "/illustrations/good-owner/q9.png",
     type: "scenario",
     text: "거래처가 또 늦게 옴. 또 빠뜨림. 짜증 1톤.",
     contextTags: ["거래처"],
@@ -291,6 +297,7 @@ export const questions: Question[] = [
   },
   {
     id: "q10",
+    illustration: "/illustrations/good-owner/q10.png",
     type: "scenario",
     text: `밤 11시. 손님 카톡: "내일 가도 돼요?"`,
     contextTags: ["손님", "자기자신"],
@@ -355,6 +362,7 @@ export const questions: Question[] = [
   },
   {
     id: "q12",
+    illustration: "/illustrations/good-owner/q12.png",
     type: "scenario",
     text: `직원: "사장님... 급여 좀 미리 받을 수 있을까요? ㅠ"`,
     contextTags: ["직원"],
@@ -387,6 +395,7 @@ export const questions: Question[] = [
   },
   {
     id: "q13",
+    illustration: "/illustrations/good-owner/q13.png",
     type: "forced",
     text: "둘 중 더 가까운 거? (정답 없음)",
     contextTags: ["직원"],
@@ -407,6 +416,7 @@ export const questions: Question[] = [
   },
   {
     id: "q14",
+    illustration: "/illustrations/good-owner/q14.png",
     type: "forced",
     text: "내 진짜 습관에 더 가까운 거?",
     contextTags: ["직원", "자기자신"],
@@ -427,6 +437,7 @@ export const questions: Question[] = [
   },
   {
     id: "q15",
+    illustration: "/illustrations/good-owner/q15.png",
     type: "forced",
     text: "더 자주 드는 생각?",
     contextTags: ["직원", "손님"],
@@ -447,6 +458,7 @@ export const questions: Question[] = [
   },
   {
     id: "q16",
+    illustration: "/illustrations/good-owner/q16.png",
     type: "forced",
     text: "장사하면서 더 먼저 드는 생각?",
     contextTags: ["손님", "자기자신"],

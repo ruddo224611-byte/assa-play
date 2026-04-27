@@ -3,6 +3,7 @@ import type { BusinessTypeQuestion } from "@/types/business-type";
 export const questions: BusinessTypeQuestion[] = [
   {
     id: "q1",
+    illustration: "/illustrations/business-type/q1.png",
     text: "1호점 매출이 이제 좀 안정됐다. 딱 1년 뒤 그림, 뭐부터 본다?",
     options: [
       { id: "A", label: "2호점 자리부터 본다. 브랜드는 지금부터 늘리는 거지.", score: { conqueror: 2 } },
@@ -13,6 +14,7 @@ export const questions: BusinessTypeQuestion[] = [
   },
   {
     id: "q2",
+    illustration: "/illustrations/business-type/q2.png",
     text: "재료값이 또 올랐다. 메뉴판 다시 봐야 할 타이밍이다. 당신은?",
     options: [
       { id: "A", label: "원가표부터 다시 본다. 얼마 올려야 안 망하는지 숫자로 깐다.", score: { strategist: 1, craftsman: 1 } },
@@ -23,6 +25,7 @@ export const questions: BusinessTypeQuestion[] = [
   },
   {
     id: "q3",
+    illustration: "/illustrations/business-type/q3.png",
     text: "토요일 점심 앞두고 알바가 갑자기 못 나온다. 머리 하얘지는 그 순간, 당신은?",
     options: [
       { id: "A", label: "일단 지인망 풀가동. 옆가게, 예전 알바, 단기 인력 다 전화한다.", score: { collaborator: 2 } },
@@ -33,6 +36,7 @@ export const questions: BusinessTypeQuestion[] = [
   },
   {
     id: "q4",
+    illustration: "/illustrations/business-type/q4.png",
     text: "SNS에서 비슷한 메뉴가 터졌다. 손님들도 슬슬 그거 없냐고 묻는다. 당신은?",
     options: [
       { id: "A", label: "일단 이번 주 한정으로 올린다. 반응 오면 그때 생각한다.", score: { adventurer: 2 } },
@@ -43,6 +47,7 @@ export const questions: BusinessTypeQuestion[] = [
   },
   {
     id: "q5",
+    illustration: "/illustrations/business-type/q5.png",
     text: "오후 3시만 되면 매장이 갑자기 조용해진다. 이 죽은 시간, 어떻게 살릴까?",
     options: [
       { id: "A", label: "동네 모임 하나 만든다. 소소한 클래스든 번개든 사람 모이면 매출도 따라온다.", score: { collaborator: 2 } },
@@ -63,6 +68,7 @@ export const questions: BusinessTypeQuestion[] = [
   },
   {
     id: "q7",
+    illustration: "/illustrations/business-type/q7.png",
     text: "바로 옆에 비슷한 가게가 오픈했다. 그것도 간판 빡세게 달고. 당신은?",
     options: [
       { id: "A", label: "한 집 더 낼 생각까지 한다. 먼저 깃발 꽂는 쪽이 이긴다.", score: { conqueror: 2 } },
@@ -73,6 +79,7 @@ export const questions: BusinessTypeQuestion[] = [
   },
   {
     id: "q8",
+    illustration: "/illustrations/business-type/q8.png",
     text: "연휴 장사, 열까 말까 단톡방까지 시끄럽다. 당신은?",
     options: [
       { id: "A", label: "원래 쉬는 날이면 쉰다. 팀도 리듬이 있어야 오래 간다.", score: { farmer: 2 } },
@@ -83,6 +90,7 @@ export const questions: BusinessTypeQuestion[] = [
   },
   {
     id: "q9",
+    illustration: "/illustrations/business-type/q9.png",
     text: "거래처가 우리랑 독점으로 가자며 조건을 던진다. 이 제안, 어떻게 볼까?",
     options: [
       { id: "A", label: "물량이랑 조건 좋으면 묶는다. 스케일 만들 기회면 잡아야지.", score: { conqueror: 2 } },
@@ -93,6 +101,7 @@ export const questions: BusinessTypeQuestion[] = [
   },
   {
     id: "q10",
+    illustration: "/illustrations/business-type/q10.png",
     text: "가게 분위기가 좀 낡아 보인다. 손님도 사진 잘 안 찍는다. 예산은 한정. 당신은?",
     options: [
       { id: "A", label: "요즘 감성으로 확 바꾼다. 사진 찍히는 맛이 있어야 한다.", score: { adventurer: 2 } },
@@ -103,6 +112,7 @@ export const questions: BusinessTypeQuestion[] = [
   },
   {
     id: "q11",
+    illustration: "/illustrations/business-type/q11.png",
     text: "별점 테러급 후기가 하나 크게 퍼졌다. 그날 밤, 당신은?",
     options: [
       { id: "A", label: "고객이랑 바로 통화한다. 먼저 풀고 그다음 공지한다.", score: { collaborator: 2 } },
@@ -123,6 +133,7 @@ export const questions: BusinessTypeQuestion[] = [
   },
   {
     id: "q13",
+    illustration: "/illustrations/business-type/q13.png",
     text: "점심 피크마다 줄이 너무 길다. 손님 표정이 슬슬 굳는다. 당신은?",
     options: [
       { id: "A", label: "주문 방식부터 뜯어고친다. 선결제, 픽업 동선, 작업 분업 바로 손본다.", score: { strategist: 1, conqueror: 1 } },
@@ -133,6 +144,7 @@ export const questions: BusinessTypeQuestion[] = [
   },
   {
     id: "q14",
+    illustration: "/illustrations/business-type/q14.png",
     text: "돈은 벌리는데 솔직히 좀 질린다. 장사가 루틴처럼 느껴질 때, 당신은?",
     options: [
       { id: "A", label: "새 브랜드나 다른 업종 한 번 더 판다. 체급 올릴 때다.", score: { conqueror: 2 } },
@@ -143,6 +155,7 @@ export const questions: BusinessTypeQuestion[] = [
   },
   {
     id: "q15",
+    illustration: "/illustrations/business-type/q15.png",
     text: "지역 축제나 브랜드 콜라보 제안이 왔다. 보기엔 재밌는데 손도 많이 갈 듯. 당신은?",
     options: [
       { id: "A", label: "재밌어 보이면 간다. 이런 판에서 바이럴도 터진다.", score: { adventurer: 2 } },
@@ -153,6 +166,7 @@ export const questions: BusinessTypeQuestion[] = [
   },
   {
     id: "q16",
+    illustration: "/illustrations/business-type/q16.png",
     text: "비만 오면 매출이 축 처진다. 시즌마다 반복되는 이 장면, 당신은?",
     options: [
       { id: "A", label: "날씨별 매출 패턴 보고 인력, 발주, 광고 시간을 다시 짠다.", score: { strategist: 2 } },
@@ -163,6 +177,7 @@ export const questions: BusinessTypeQuestion[] = [
   },
   {
     id: "q17",
+    illustration: "/illustrations/business-type/q17.png",
     text: "메뉴가 늘어날 대로 늘어서 주방이 매일 전쟁이다. 이쯤 되면 당신은?",
     options: [
       { id: "A", label: "대표 메뉴만 남긴다. 잘하는 것만 남겨야 주방이 산다.", score: { craftsman: 2 } },
@@ -183,6 +198,7 @@ export const questions: BusinessTypeQuestion[] = [
   },
   {
     id: "q19",
+    illustration: "/illustrations/business-type/q19.png",
     text: "계약 갱신 시즌이다. 건물주는 길게 묶자 하고, 당신 머리는 복잡하다. 당신은?",
     options: [
       { id: "A", label: "오래 갈 자리면 길게 묶는다. 이 동네에서 이름이 쌓이는 게 자산이다.", score: { farmer: 2 } },
