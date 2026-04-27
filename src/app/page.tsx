@@ -53,7 +53,7 @@ export default function Home() {
       {/* Test cards (이미지만, 캡션 없음) */}
       <section className="bg-white px-4 py-12 sm:px-8 md:px-12 lg:px-16 xl:px-20">
         <div className="mx-auto max-w-6xl">
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             <Link
               href="/play/good-owner/test"
               className="group block overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
@@ -81,6 +81,32 @@ export default function Home() {
                   height={648}
                   className="h-full w-full object-cover transition group-hover:scale-105"
                 />
+              </div>
+            </Link>
+
+            <Link
+              href="/play/burnout/test"
+              className="group block overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
+            >
+              <div className="flex aspect-[16/9] items-center justify-center bg-gradient-to-br from-purple-200 via-rose-200 to-amber-200">
+                <div className="text-center">
+                  <div className="flex justify-center gap-2 text-3xl">
+                    <span>🌞</span>
+                    <span>😊</span>
+                    <span>😐</span>
+                    <span>😵‍💫</span>
+                    <span>💀</span>
+                  </div>
+                  <p
+                    className="mt-3 text-2xl font-bold text-slate-900 drop-shadow-sm"
+                    style={{ fontFamily: "'Gmarket Sans', Pretendard, sans-serif" }}
+                  >
+                    사장님 번아웃 테스트
+                  </p>
+                  <p className="mt-1 text-xs font-medium text-slate-700">
+                    나의 번아웃 단계는?
+                  </p>
+                </div>
               </div>
             </Link>
           </div>
