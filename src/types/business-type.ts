@@ -31,6 +31,7 @@ export type BusinessTypeQuestionOption = {
 export type BusinessTypeQuestion = {
   id: string;
   text: string;
+  illustration?: string;
   options: BusinessTypeQuestionOption[];
 };
 

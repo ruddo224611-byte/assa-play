@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 import { questions } from "@/data/questions";
 import { calculateResult, resultToSearchParams, type Answers } from "@/lib/score";
 
@@ -58,6 +59,19 @@ export default function TestPage() {
           />
         </div>
       </div>
+
+      {currentQuestion.illustration && (
+        <div className="mx-auto mb-6 overflow-hidden rounded-2xl shadow-md" style={{ maxWidth: 320 }}>
+          <Image
+            src={currentQuestion.illustration}
+            alt=""
+            width={320}
+            height={320}
+            priority={currentIndex === 0}
+            className="h-auto w-full"
+          />
+        </div>
+      )}
 
       <h2 className="text-xl font-bold leading-relaxed text-slate-900 sm:text-2xl">
         {currentQuestion.text}
