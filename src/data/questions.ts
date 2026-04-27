@@ -36,6 +36,7 @@ export const questions: Question[] = [
   },
   {
     id: "q2",
+    illustration: "/illustrations/good-owner/q2.png",
     type: "scenario",
     text: "원가 또 올랐다. 가격 인상 미루는 중인데 어떻게 함?",
     contextTags: ["손님", "자기자신"],
@@ -101,6 +102,7 @@ export const questions: Question[] = [
   },
   {
     id: "q4",
+    illustration: "/illustrations/good-owner/q4.png",
     type: "scenario",
     text: "성과 떨어지는 직원한테 한마디 해야 함. 마음의 준비 중.",
     contextTags: ["직원"],
@@ -199,6 +201,7 @@ export const questions: Question[] = [
   },
   {
     id: "q7",
+    illustration: "/illustrations/good-owner/q7.png",
     type: "scenario",
     text: "직원 실수로 손님 컴플레인 떴다. 사장님이 끼어들어야 함.",
     contextTags: ["직원", "손님"],
@@ -330,6 +333,7 @@ export const questions: Question[] = [
   },
   {
     id: "q11",
+    illustration: "/illustrations/good-owner/q11.png",
     type: "scenario",
     text: `손님: "이 집 가격이 비싼 편이네요?" (앞에서 직접)`,
     contextTags: ["손님"],
