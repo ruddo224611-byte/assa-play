@@ -58,6 +58,7 @@ export const questions: BusinessTypeQuestion[] = [
   },
   {
     id: "q6",
+    illustration: "/illustrations/business-type/q6.png",
     text: "단골이 요즘 가격 너무 오른 거 아니냐고 툴툴댄다. 당신의 반응은?",
     options: [
       { id: "A", label: "싼 재료로는 안 간다. 차라리 왜 비싼지 제대로 설명한다.", score: { craftsman: 2 } },
@@ -123,6 +124,7 @@ export const questions: BusinessTypeQuestion[] = [
   },
   {
     id: "q12",
+    illustration: "/illustrations/business-type/q12.png",
     text: "백화점 팝업 제안이 왔다. 잘되면 2호점 얘기도 붙는다. 당신은?",
     options: [
       { id: "A", label: "반응 괜찮으면 바로 2호점 루트 탄다.", score: { conqueror: 2 } },
@@ -188,6 +190,7 @@ export const questions: BusinessTypeQuestion[] = [
   },
   {
     id: "q18",
+    illustration: "/illustrations/business-type/q18.png",
     text: "SNS 올려도 조회수는 조용하고 저장수도 없다. 감이 안 올 때, 당신은?",
     options: [
       { id: "A", label: "릴스든 밈이든 지금 뜨는 포맷으로 바로 갈아탄다.", score: { adventurer: 2 } },
@@ -209,6 +212,7 @@ export const questions: BusinessTypeQuestion[] = [
   },
   {
     id: "q20",
+    illustration: "/illustrations/business-type/q20.png",
     text: "지금부터 3년 뒤, 내가 제일 되고 싶은 사장님 그림은?",
     options: [
       { id: "A", label: "내 이름 걸고 여러 지점을 굴리는 사장님.", score: { conqueror: 2 } },

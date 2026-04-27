@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { questions } from "@/data/business-type/questions";
@@ -19,6 +19,17 @@ export default function BusinessTypeTestPage() {
   const currentQuestion = questions[currentIndex];
   const progress = Math.round(((currentIndex + 1) / questions.length) * 100);
   const isLast = currentIndex === questions.length - 1;
+
+  // 다음 2문항 일러 prefetch (체감 로딩 시간 단축)
+  useEffect(() => {
+    for (let offset = 1; offset <= 2; offset++) {
+      const nextQ = questions[currentIndex + offset];
+      if (nextQ?.illustration) {
+        const img = new window.Image();
+        img.src = nextQ.illustration;
+      }
+    }
+  }, [currentIndex]);
 
   function handleAnswer(optionId: "A" | "B" | "C" | "D") {
     if (submitting) return;
